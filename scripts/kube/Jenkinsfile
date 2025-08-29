@@ -3,6 +3,8 @@ pipeline {
 
     environment {
       KUBECONFIG = '/home/osboxes/.kube/config'
+    // Chemin vers bash.exe, adapte-le si besoin
+      BASH_PATH = 'C:\\Users\\atoessi1\\AppData\\Local\\Programs\\Git\\bin\\bash.exe'
     }
 
     stages {
@@ -15,7 +17,9 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 // Exemple de commande kubectl, à adapter selon ta config
-                sh 'kubectl apply -k dev/'
+               // sh 'kubectl apply -k dev/'
+                // Appel explicite de bash.exe pour exécuter kubectl sous Git Bash
+                bat "\"${BASH_PATH}\" -c 'kubectl apply -k dev/'"
             }
         }
     }
