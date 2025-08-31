@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-      KUBECONFIG = 'C:\\Users\\atoessi1\\.kube\\config'
+      KUBECONFIG = 'C:\\Utilisateurs\\atoessi1\\.kube\\config'
     // Chemin vers bash.exe, adapte-le si besoin
       BASH_PATH = 'C:\\Users\\atoessi1\\AppData\\Local\\Programs\\Git\\bin\\bash.exe'
     }
