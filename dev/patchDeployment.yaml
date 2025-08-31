@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: monanimal-extranet
-        image: nginx:latest
+        image: princekomlan/jpetstore:1.0.2
         resources:
           limits:
             memory: "128Mi"
