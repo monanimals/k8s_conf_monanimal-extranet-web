@@ -9,7 +9,7 @@ spec:
   - host: jpetstore.local
     http:
       paths:
-      - path: /jpetstore
+      - path: /jpetstore/
         pathType: Prefix
         backend:
           service:
