@@ -10,7 +10,7 @@ spec:
     http:
       paths:
       - path: /jpetstore/
-        pathType: ImplementationSpecific
+        pathType: Prefix
         backend:
           service:
             name: service-monanimal-extranet-dev
