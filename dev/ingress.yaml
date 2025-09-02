@@ -13,6 +13,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: ingress-monanimal-extranet-dev
+            name: service-monanimal-extranet-dev
             port:
               number: 80
