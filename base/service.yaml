@@ -8,9 +8,9 @@ spec:
     app: monanimal-extranet
   ports:
   - name: http
-    port: 9000
+    port: 80
     protocol: TCP
-    targetPort: 9000
+    targetPort: 8080
   - name: jmx 
     port: 8080
     targetPort: 8080
