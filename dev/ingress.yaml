@@ -4,6 +4,7 @@ metadata:
   name: ingress-monanimal-extranet
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /jpetstore/$2
+spec:
   ingressClassName: nginx
   rules:
   - host: jpetstore.local
