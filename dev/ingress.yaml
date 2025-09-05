@@ -2,15 +2,22 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-monanimal-extranet
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  # annotations:
+  #   nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
   - host: jpetstore.local
     http:
       paths:
-      - path: /jpetstore(/|$)(.*)
+      - path: /jpetstore/
+        pathType: Prefix
+        backend:
+          service:
+            name: service-monanimal-extranet-dev
+            port:
+              number: 80
+      - path: /jpetstore/shop/index.shtml
         pathType: Prefix
         backend:
           service:
