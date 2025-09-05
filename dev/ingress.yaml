@@ -10,15 +10,8 @@ spec:
   - host: jpetstore.local
     http:
       paths:
-      - path: /jpetstore/
-        pathType: Prefix
-        backend:
-          service:
-            name: service-monanimal-extranet-dev
-            port:
-              number: 80
-      - path: /jpetstore/shop/index.shtml
-        pathType: Prefix
+      - path: /jpetstore(/|$)(.*)
+        pathType: ImplementationSpecific
         backend:
           service:
             name: service-monanimal-extranet-dev
