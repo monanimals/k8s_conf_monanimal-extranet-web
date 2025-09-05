@@ -10,8 +10,8 @@ spec:
   - host: jpetstore.local
     http:
       paths:
-      - path: /jpetstore(/|$)(.*)
-        pathType: ImplementationSpecific
+      - path: /jpetstore/
+        pathType: Prefix
         backend:
           service:
             name: service-monanimal-extranet-dev
