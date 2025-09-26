@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'develop', url: 'https://github.com/monanimals/k8s_conf_monanimal-extranet-web.git'
+                git branch: 'main', url: 'https://github.com/monanimals/k8s_conf_monanimal-extranet-web.git'
             }
         }
 
