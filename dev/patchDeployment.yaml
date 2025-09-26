@@ -5,7 +5,7 @@ metadata:
     namespace: monanimal-extranet-dev
   name: monanimal-extranet
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: monanimal-extranet
@@ -16,11 +16,10 @@ spec:
     spec:
       containers:
       - name: monanimal-extranet
-        image: nginx:latest
+        image: princekomlan/jpetstore:1.0.2
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
         - containerPort: 80
-
