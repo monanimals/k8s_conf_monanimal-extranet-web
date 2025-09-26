@@ -3,6 +3,8 @@ kind: Kustomization
 
 bases:
   - ../base
+resources:
+  - ingress.yaml
   
 namespace: monanimal-extranet-dev
 nameSuffix: -dev
